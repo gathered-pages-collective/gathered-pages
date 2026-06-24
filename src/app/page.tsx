@@ -265,54 +265,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stories of Connection */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="font-body text-orange font-semibold text-sm uppercase tracking-wider">
-              Stories
-            </span>
-            <h2 className="font-display text-navy text-4xl font-bold mt-3">Stories of Connection</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote:
-                  "The book club gave us something to look forward to each week. For the first time in years, I felt like I was part of something.",
-                attribution: "Shelter resident, Colorado",
-              },
-              {
-                quote:
-                  "Sitting together to discuss a book reminded us that we all have stories worth sharing — and worth hearing.",
-                attribution: "Recovery community participant",
-              },
-              {
-                quote:
-                  "It wasn't just about the book. It was about having a space where we could be ourselves and not be judged.",
-                attribution: "Transitional housing resident",
-              },
-            ].map((testimonial, index) => (
-              <figure
-                key={index}
-                className="bg-cream rounded-2xl p-8 border-l-4 border-orange"
-              >
-                <blockquote>
-                  <p className="font-body text-navy/80 text-lg leading-relaxed italic mb-4">
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                </blockquote>
-                <figcaption className="font-body text-navy/50 text-sm">
-                  — {testimonial.attribution}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <p className="text-center font-body text-navy/40 text-sm mt-8">
-            * Illustrative of the impact we aim to create as we launch.
-          </p>
-        </div>
-      </section>
-
       {/* Meet the Board */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
