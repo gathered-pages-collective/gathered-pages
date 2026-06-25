@@ -36,7 +36,7 @@ export default function HomePage() {
               <span className="inline-flex items-center gap-2 rounded-full bg-orange/10 px-4 py-1.5 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-orange" aria-hidden="true" />
                 <span className="text-orange text-xs font-semibold uppercase tracking-wider">
-                  Now serving Denver-area women
+                  Now serving women nationwide
                 </span>
               </span>
 
@@ -113,7 +113,7 @@ export default function HomePage() {
             {[
               { stat: "100%", label: "Free to recipients" },
               { stat: "100¢", label: "Goes to women in need" },
-              { stat: "10+", label: "Denver-area partners" },
+              { stat: "Nationwide", label: "Communities we serve" },
               { stat: "501(c)(3)", label: "Registered nonprofit" },
             ].map(({ stat, label }) => (
               <div key={label} className="text-center">
@@ -188,6 +188,60 @@ export default function HomePage() {
                 height={600}
                 className="w-full max-w-md mx-auto rounded-2xl"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Two Ways to Take Part */}
+      <section className="py-20 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="font-body text-orange font-semibold text-sm uppercase tracking-wider">
+              Get Involved
+            </span>
+            <h2 className="font-display text-navy text-4xl font-bold mt-3 mb-4">
+              Two Ways to Take Part
+            </h2>
+            <p className="font-body text-navy/70 max-w-xl mx-auto">
+              Whether through an organization or on your own, there&apos;s a place for you in a
+              Gathered Pages book club.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white rounded-3xl p-8 shadow-sm flex flex-col">
+              <span className="text-4xl mb-4" role="img" aria-label="Box">📦</span>
+              <h3 className="font-display text-navy text-2xl font-bold mb-3">Book Club in a Box</h3>
+              <p className="font-body text-navy/70 leading-relaxed mb-6 flex-1">
+                We deliver complete, free book club boxes to organizations serving women in need —
+                shelters, recovery programs, transitional housing, and more.
+              </p>
+              <Link
+                href="/how-it-works"
+                className="inline-flex items-center gap-2 font-body font-semibold text-orange hover:text-orange-light transition-colors focus-ring rounded"
+              >
+                See how it works
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            <div className="bg-navy rounded-3xl p-8 shadow-sm flex flex-col">
+              <span className="text-4xl mb-4" role="img" aria-label="Laptop">💻</span>
+              <h3 className="font-display text-white text-2xl font-bold mb-3">Join a Virtual Book Club</h3>
+              <p className="font-body text-white/80 leading-relaxed mb-6 flex-1">
+                Receive your own personal box and join a facilitator-led virtual book club with other
+                women who share your story — connect from anywhere in the country.
+              </p>
+              <Link
+                href="/virtual-book-clubs"
+                className="inline-flex items-center gap-2 font-body font-semibold text-orange hover:text-orange-light transition-colors focus-ring rounded"
+              >
+                Join a virtual book club
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
@@ -323,42 +377,98 @@ export default function HomePage() {
               Supporting Women in Business
             </span>
             <h2 className="font-display text-navy text-4xl font-bold mt-3 mb-4">
-              Women-Owned Partners
+              Our Artists &amp; Journals
             </h2>
             <p className="font-body text-navy/70 max-w-xl mx-auto">
-              Every item in our boxes is purchased from a women-owned business.
-              We are proud to amplify their work.
+              Every item in our boxes is purchased from a women-owned business. Meet the artists
+              whose work fills each one.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
             {[
               {
-                name: "The Read Queen",
-                tagline: "Independent women-owned bookstore & café",
-                photo: "/partners/The%20Read%20Queen.jpg",
+                name: "Rebekah Hayden",
+                business: "Sunshine and Laurel Art",
+                headshot: "/partners/Rebekah%20Hayden.jpg",
+                art: "/partners/Rebekah%20Hayden%20art.webp",
+                blurb: "A Colorado landscape artist creating expressive acrylic paintings inspired by the beauty of nature.",
+                href: "https://sunshineandlaurelart.com/",
+                linkLabel: "Visit Sunshine and Laurel Art",
               },
               {
-                name: "The Next Chapter",
-                tagline: "Books and literary gifts, women-owned",
-                photo: "/partners/The%20Next%20Chapter.jpg",
+                name: "Laura",
+                business: "Ginkgo by Laura",
+                headshot: "/partners/Laura.jpg",
+                art: "/partners/Laura%27s%20art.webp",
+                blurb: "A biologist and gardener creating nature-inspired illustrated cards and the journals in every box.",
+                href: "https://www.etsy.com/shop/GinkgoByLaura",
+                linkLabel: "Shop Ginkgo by Laura",
               },
-            ].map((partner) => (
-              <div key={partner.name} className="bg-cream rounded-2xl overflow-hidden">
-                <div className="relative aspect-[16/10] w-full bg-cream-dark">
+            ].map((artist) => (
+              <div key={artist.name} className="bg-cream rounded-2xl overflow-hidden flex flex-col">
+                <div className="relative aspect-[4/3] w-full bg-cream-dark">
                   <Image
-                    src={partner.photo}
-                    alt={`${partner.name} storefront`}
+                    src={artist.art}
+                    alt={`Artwork by ${artist.name}`}
                     fill
-                    sizes="(min-width: 640px) 24rem, 100vw"
+                    sizes="(min-width: 768px) 32rem, 100vw"
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-display text-navy font-bold text-lg">{partner.name}</h3>
-                  <p className="font-body text-navy/60 text-sm mt-1">{partner.tagline}</p>
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden bg-cream-dark shrink-0">
+                      <Image
+                        src={artist.headshot}
+                        alt={artist.name}
+                        fill
+                        sizes="48px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-navy font-bold text-lg leading-tight">{artist.name}</h3>
+                      <p className="font-body text-orange text-sm font-semibold">{artist.business}</p>
+                    </div>
+                  </div>
+                  <p className="font-body text-navy/70 text-sm leading-relaxed flex-1">{artist.blurb}</p>
+                  <a
+                    href={artist.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-4 font-body text-sm text-orange hover:text-orange-light transition-colors focus-ring rounded font-semibold"
+                  >
+                    {artist.linkLabel} →
+                  </a>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Bookstore partners */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
+            <div className="bg-cream rounded-2xl overflow-hidden">
+              <div className="relative aspect-[16/10] w-full bg-cream-dark">
+                <Image
+                  src="/partners/The%20Next%20Chapter.jpg"
+                  alt="The Next Chapter storefront"
+                  fill
+                  sizes="(min-width: 640px) 24rem, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="font-display text-navy font-bold text-lg">The Next Chapter</h3>
+                <p className="font-body text-navy/60 text-sm mt-1">Books and literary gifts, women-owned</p>
+              </div>
+            </div>
+            <div className="rounded-2xl border-2 border-dashed border-navy/15 bg-cream/40 flex flex-col items-center justify-center text-center p-6 min-h-[14rem]">
+              <span className="text-3xl mb-3" aria-hidden="true">✨</span>
+              <h3 className="font-display text-navy/60 font-bold text-lg">More Partners Coming Soon</h3>
+              <p className="font-body text-navy/50 text-sm mt-1">
+                We&apos;re finalizing partnerships with more women-owned businesses.
+              </p>
+            </div>
           </div>
           <div className="text-center">
             <Link

@@ -6,8 +6,9 @@ import Image from "next/image";
 
 const links = [
   { href: "/about", label: "About" },
-  { href: "/meet-the-board", label: "Our Board" },
+  { href: "/meet-our-founder", label: "Our Founder" },
   { href: "/how-it-works", label: "How It Works" },
+  { href: "/virtual-book-clubs", label: "Virtual Clubs" },
   { href: "/partner", label: "Partner" },
   { href: "/faq", label: "FAQ" },
 ];
@@ -31,10 +32,10 @@ export function Navbar() {
             alt="Gathered Pages Collective"
             width={208}
             height={160}
-            className="h-14 w-auto"
+            className="h-16 w-auto"
             priority
           />
-          <span className="font-display text-navy font-semibold text-xl tracking-tight hidden sm:block">
+          <span className="font-display text-navy font-semibold text-lg sm:text-xl tracking-tight">
             Gathered Pages
           </span>
         </Link>

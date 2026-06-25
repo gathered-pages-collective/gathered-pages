@@ -37,14 +37,17 @@ export function Marquee() {
   return (
     <section
       className="overflow-hidden border-y border-navy/10 bg-white py-10"
-      aria-label="Denver-area organizations we serve"
+      aria-label="Organizations we hope to serve"
     >
+      <p className="text-center font-body text-navy/50 text-xs font-semibold uppercase tracking-wider mb-8 px-4">
+        Organizations like these are who we&apos;re building to reach
+      </p>
       <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
         <PartnerTrack />
         <PartnerTrack />
       </div>
       <p className="sr-only">
-        Denver-area organizations we serve: {partners.map((partner) => partner.name).join(", ")}
+        Organizations we hope to serve: {partners.map((partner) => partner.name).join(", ")}
       </p>
     </section>
   );

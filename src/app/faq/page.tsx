@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Does Gathered Pages Collective operate nationally?",
     answer:
-      "We are based in Colorado and currently focused on building strong partnerships within our region. As we grow and secure funding, we aim to expand nationally. If your organization is outside Colorado, we still encourage you to apply — we would love to grow to reach you.",
+      "Yes. We serve women nationwide. We are a registered 501(c)(3) nonprofit organized in Colorado, and we welcome organizations and participants from anywhere in the country. Wherever you are, we encourage you to apply or join a virtual book club.",
     link: null,
   },
   {

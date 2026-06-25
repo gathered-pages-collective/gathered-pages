@@ -54,6 +54,7 @@ export function Footer() {
             <ul className="space-y-2" role="list">
               {[
                 { href: "/about", label: "About Us" },
+                { href: "/meet-our-founder", label: "Meet Our Founder" },
                 { href: "/meet-the-board", label: "Our Board" },
                 { href: "/how-it-works", label: "How It Works" },
                 { href: "/our-partners", label: "Women-Owned Partners" },
@@ -80,6 +81,7 @@ export function Footer() {
             <ul className="space-y-2" role="list">
               {[
                 { href: "/donate", label: "Donate" },
+                { href: "/virtual-book-clubs", label: "Join a Virtual Book Club" },
                 { href: "/partner", label: "Partner With Us" },
                 { href: "/shop", label: "Buy a Box" },
                 { href: "/contact", label: "Contact Us" },
