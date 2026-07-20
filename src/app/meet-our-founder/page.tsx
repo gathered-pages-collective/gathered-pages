@@ -52,11 +52,11 @@ export default function MeetOurFounderPage() {
             <div className="flex justify-center lg:justify-start">
               <div className="relative aspect-[4/5] w-full max-w-xs rounded-2xl overflow-hidden bg-cream-dark shadow-md">
                 <Image
-                  src="/board/Jamie%20Dickinson.jpg"
-                  alt="Jamie Dickinson, founder of Gathered Pages Collective"
+                  src="/partners/Jamie%20and%20her%20mom.jpg"
+                  alt="Jamie Dickinson and her mom"
                   fill
                   sizes="(min-width: 1024px) 20rem, 100vw"
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>

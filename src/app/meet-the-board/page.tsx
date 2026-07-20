@@ -13,14 +13,22 @@ export const metadata: Metadata = {
   },
 };
 
-const boardMembers = [
+type BoardMember = {
+  name: string;
+  role: string;
+  title?: string;
+  photo: string;
+  position: string;
+  bio: string;
+};
+
+const boardMembers: BoardMember[] = [
   {
     name: "Jamie Dickinson",
     role: "Founder",
-    title: "Litigator",
     photo: "/board/Jamie%20Dickinson.jpg",
     position: "object-center",
-    bio: "Jamie Dickinson is the founder of Gathered Pages Collective. By profession she is a full-service litigator who represents public, private, and corporate clients across the full range of their litigation needs. Jamie especially enjoys litigation that “touches the land” — representing property owners in real estate matters including quiet title actions, condemnation issues, land use litigation, and easement disputes, and representing condemning authorities throughout Colorado in their eminent domain matters. She works to deeply understand her clients’ businesses and lives so she can guide them through the condemnation process. Jamie earned her J.D. from the University of Denver Sturm College of Law (2008) and her B.A. from Colorado College (2004).",
+    bio: "Jamie is an attorney, yoga instructor, and passionate advocate for building meaningful connections. As a lawyer, she is committed to serving her clients with integrity, compassion, and practical guidance. On the yoga mat, she creates welcoming spaces where students can reconnect with themselves through movement, mindfulness, and breath.\n\nBeyond her professional life, Jamie is a devoted wife and mother. Outside of work, she enjoys traveling to new places, spending time on the ski slopes, catching the sunset from 14,000 feet, and making lasting memories with her family. She believes life’s greatest joys are found in shared experiences, meaningful adventures, and the people we love most.",
   },
   {
     name: "Amber Story",
@@ -95,10 +103,19 @@ export default function MeetTheBoardPage() {
                 <p className="font-body text-orange font-semibold mt-1">
                   {member.role}
                 </p>
-                <p className="font-body text-navy/50 text-sm mt-1">{member.title}</p>
-                <p className="font-body text-navy/70 text-lg leading-relaxed mt-5">
-                  {member.bio}
-                </p>
+                {member.title && (
+                  <p className="font-body text-navy/50 text-sm mt-1">{member.title}</p>
+                )}
+                <div className="mt-5 space-y-4">
+                  {member.bio.split("\n\n").map((paragraph, paragraphIndex) => (
+                    <p
+                      key={paragraphIndex}
+                      className="font-body text-navy/70 text-lg leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
